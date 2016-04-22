@@ -1,0 +1,20 @@
+.drop-box {
+    top: 50%;
+    left: 50%;
+    background: #F8F8F8;
+    border: 5px dashed #DDD;
+    width: 600px;
+    height: 100px;
+    text-align: center;
+    padding-top: 50px;
+    margin: 50px auto;
+}
+.dragover {
+    border: 5px dashed blue;
+}
+.centered {
+    top: 50%;
+    left: 50%;
+    mering: 0 auto;
+    padding-top: 25px;
+}

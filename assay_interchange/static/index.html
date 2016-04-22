@@ -1,13 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Assay Configuration Interchange</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-</head>
-<body>
-<form enctype="multipart/form-data" action='/convert' method="post">
-    <input id="file" name="file" type="file" onchange="this.form.submit();"/>
-</form>
-</body>
-</html>
+<!DOCTYPE html><html><head lang="en"></head><meta charset="utf-8"><title>AC Interchange</title><script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script><script src="js/app.js"></script><script src="js/bower_components/ng-file-upload/ng-file-upload-all.min.js"></script><script src="js/bower_components/angular-file-saver/dist/angular-file-saver.bundle.min.js"></script><link rel="stylesheet" href="styles.css"><link rel="shortcut icon" href="favico.ico"><body><div ng-app="fileUpload" ng-controller="MyCtrl"><div ngf-drop ngf-select ng-model="files" ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true" accept="application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ngf-pattern="'application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'" class="drop-box"><div>Drop json or xlsx assay configurations here.</div><br><div ng-if="files.length &gt; 0">{{ files[0].name }}</div></div><ul><li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}</li></ul><pre>{{log}}</pre><pre>{{filedata.message}}</pre></div></body></html>

@@ -1,0 +1,27 @@
+doctype html
+html
+    head(lang="en")
+    meta(charset="utf-8")
+    title AC Interchange
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js")
+    script(src="js/app.js")
+    script(src="js/bower_components/ng-file-upload/ng-file-upload-all.min.js")
+    script(src="js/bower_components/angular-file-saver/dist/angular-file-saver.bundle.min.js")
+    link(rel="stylesheet" href="styles.css")
+    link(rel="shortcut icon", href="favico.ico")
+    body
+        div(ng-app="fileUpload" ng-controller="MyCtrl")
+            div(ngf-drop ngf-select ng-model="files"
+            class="drop-box"
+            ngf-drag-over-class="'dragover'"
+            ngf-multiple="true"
+            ngf-allow-dir="true"
+            accept="application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            ngf-pattern="'application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'")
+                div Drop json or xlsx assay configurations here.
+                br
+                div(ng-if="files.length > 0") {{ files[0].name }}
+            ul
+                li(ng-repeat="f in files" style="font:smaller") {{f.name}} {{f.$error}} {{f.$errorParam}}
+            pre {{log}}
+            pre {{filedata.message}}

@@ -16,3 +16,4 @@ requests-cache==0.4.12
 six==1.10.0
 tqdm==4.4.1
 wsgiref==0.1.2
+Flask-Cors==2.1.2
