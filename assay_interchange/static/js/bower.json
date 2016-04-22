@@ -1,0 +1,26 @@
+{
+  "name": "AssayInterchange",
+  "homepage": "https://github.com/whereskenneth/AssayInterchange",
+  "authors": [
+    "Kenneth Tussey <whereskenneth@gmail.com>"
+  ],
+  "description": "Assay interchange front end web app",
+  "main": "runserver.py",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-file-upload-shim": "~12.0.4",
+    "ng-file-upload": "^12.0.4",
+    "filesaver": "*"
+  },
+  "devDependencies": {
+    "angular-file-saver": "^1.1.1"
+  }
+}
