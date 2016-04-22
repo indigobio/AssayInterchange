@@ -16,8 +16,8 @@ html
             ngf-drag-over-class="'dragover'"
             ngf-multiple="true"
             ngf-allow-dir="true"
-            accept="application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            ngf-pattern="'application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'")
+            accept="*"
+            ngf-pattern="'*'")
                 div Drop json or xlsx assay configurations here.
                 br
                 div(ng-if="files.length > 0") {{ files[0].name }}
