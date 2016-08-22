@@ -14,7 +14,7 @@ from openpyxl.writer.excel import save_virtual_workbook
 
 def convert_data(request):
     try:
-        file_store = request.files.values()[0]
+        file_store = [v for v in request.files.values()][0]
         ac = get_ac(file_store)
         resp = make_response(get_output_file(ac, file_store), 200)
         filename = get_filename(ac) + get_output_format(file_store)
@@ -34,7 +34,7 @@ def get_application_type(output_format):
 
 
 def validate_data(request):
-    file_store = request.files.values()[0]
+    file_store = [v for v in request.files.values()][0]
     try:
         ac = get_ac(file_store)
         response_body = {
@@ -112,7 +112,7 @@ def get_output_file(ac, file_store):
 
 def build_error_response_message(e):
     stream = io.StringIO()
-    stream.write("File is not a assay xlsx or assay json file: " + e.message + "\n")
+    stream.write("File is not a assay xlsx or assay json file: " + str(e) + "\n")
     stream.write("\n\n")
     traceback.print_exc(file=stream)
     return '\n\n'.join(stream.getvalue().splitlines())
