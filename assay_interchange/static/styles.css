@@ -18,3 +18,8 @@
     mering: 0 auto;
     padding-top: 25px;
 }
+
+#footer {
+    bottom: 0;
+    position: absolute;
+}

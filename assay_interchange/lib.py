@@ -91,7 +91,7 @@ def get_ac(file_store):
         return from_xlsx.build_full_ac(stream)
     elif is_json_format(file_store):
         stream.seek(0)
-        json_data = json.load(stream)
+        json_data = json.loads(stream.read().decode('utf-8'))
         return build_full_ac_from_json(json_data)
 
 
