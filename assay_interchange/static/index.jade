@@ -25,3 +25,8 @@ html
                 li(ng-repeat="f in files" style="font:smaller") {{f.name}} {{f.$error}} {{f.$errorParam}}
             pre {{log}}
             pre {{filedata.message}}
+        div(id="footer")
+            a(href="https://github.com/whereskenneth/AssayInterchange", target="_blank") See the source code.
+            div Change log:
+                ul
+                    li [Aug 22 2016]: Port everything over from Python 2 to Python 3.
