@@ -3,7 +3,7 @@ import datetime
 import json
 import os
 import traceback
-import StringIO
+import io
 from dwarfsquad.lib.build import from_xlsx, from_json
 from dwarfsquad.lib.build.from_json.helpers import build_full_ac_from_json
 from dwarfsquad.lib.export.export_full_ac import get_workbook
@@ -111,7 +111,7 @@ def get_output_file(ac, file_store):
 
 
 def build_error_response_message(e):
-    stream = StringIO.StringIO()
+    stream = io.StringIO()
     stream.write("File is not a assay xlsx or assay json file: " + e.message + "\n")
     stream.write("\n\n")
     traceback.print_exc(file=stream)
