@@ -1,6 +1,6 @@
 behave==1.2.5
 click==6.6
--e git://github.com/whereskenneth/Dwarfsquad.git@master#egg=dwarfsquad
+-e git://github.com/whereskenneth/Dwarfsquad.git@v2.1.2#egg=dwarfsquad
 et-xmlfile==1.0.1
 Flask==0.11.1
 Flask-Cors==3.0.0
